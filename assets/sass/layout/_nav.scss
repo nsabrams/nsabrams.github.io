@@ -87,10 +87,27 @@
 		}
 
 		@include breakpoint('<=small') {
-			display: none;
+			// Theme hid the nav on small screens; keep it visible with wrapping
+			width: calc(100% - #{_size(element-margin) * 2});
+			max-width: calc(100% - #{_size(element-margin) * 2});
+			padding: 0.65em 0.5em;
 
-			& + #main {
-				padding-top: 0;
+			ul {
+				@include vendor('display', 'flex');
+				@include vendor('flex-wrap', 'wrap');
+				@include vendor('justify-content', 'center');
+				@include vendor('align-items', 'center');
+
+				li {
+					margin: 0.25em 0.2em;
+
+					a {
+						font-size: 0.9em;
+						padding: 0 0.85em;
+						height: 2.1em;
+						line-height: 2.1em;
+					}
+				}
 			}
 		}
 	}

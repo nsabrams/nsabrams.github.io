@@ -98,6 +98,11 @@ input, select, textarea {
 		box-sizing: inherit;
 	}
 
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+
 	body {
 		background-color: #935d8c;
 		background-image: url("images/overlay.png"), -moz-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
@@ -2372,6 +2377,8 @@ input, select, textarea {
 		.image img {
 			border-radius: 8px;
 			display: block;
+			max-width: 100%;
+			height: auto;
 		}
 
 		.image.left, .image.right {
@@ -2380,6 +2387,7 @@ input, select, textarea {
 
 			.image.left img, .image.right img {
 				width: 100%;
+				height: auto;
 			}
 
 		.image.left {
@@ -2402,6 +2410,7 @@ input, select, textarea {
 
 			.image.fit img {
 				width: 100%;
+				height: auto;
 			}
 
 		.image.main {
@@ -2412,7 +2421,62 @@ input, select, textarea {
 
 			.image.main img {
 				width: 100%;
+				height: auto;
 			}
+
+		@media screen and (max-width: 736px) {
+
+			.image.left, .image.right {
+				float: none;
+				display: block;
+				width: 100%;
+				max-width: 100%;
+				margin-left: 0;
+				margin-right: 0;
+			}
+
+		}
+
+/* Responsive split layout (e.g. Public Talks) */
+
+	.public-talks {
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		-moz-flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		-moz-align-items: flex-start;
+		-webkit-align-items: flex-start;
+		-ms-align-items: flex-start;
+		align-items: flex-start;
+		gap: 1.25em;
+	}
+
+		.public-talks__media {
+			-moz-flex: 0 1 auto;
+			-webkit-flex: 0 1 auto;
+			-ms-flex: 0 1 auto;
+			flex: 0 1 auto;
+			max-width: min(31.25rem, 100%);
+		}
+
+			.public-talks__media img {
+				display: block;
+				width: 100%;
+				height: auto;
+				border-radius: 8px;
+			}
+
+		.public-talks__content {
+			-moz-flex: 1 1 18rem;
+			-webkit-flex: 1 1 18rem;
+			-ms-flex: 1 1 18rem;
+			flex: 1 1 18rem;
+			min-width: 0;
+		}
 
 /* List */
 
@@ -3009,6 +3073,11 @@ input, select, textarea {
 				display: block;
 				border-radius: 100%;
 				width: 16em;
+				max-width: min(16em, 100%);
+				height: auto;
+				aspect-ratio: 1;
+				-o-object-fit: cover;
+				object-fit: cover;
 			}
 
 		@media screen and (max-width: 980px) {
@@ -3061,6 +3130,10 @@ input, select, textarea {
 
 				.spotlight .image img {
 					width: 12em;
+					max-width: min(12em, 100%);
+					aspect-ratio: 1;
+					-o-object-fit: cover;
+					object-fit: cover;
 				}
 
 		}
@@ -3194,6 +3267,28 @@ input, select, textarea {
 				#header.alt {
 					padding: 3.5em 1em 0.5em 1em ;
 				}
+
+		}
+
+		#header.main .image.left {
+			max-width: min(24rem, 40%);
+		}
+
+		@media screen and (max-width: 736px) {
+
+			#header.main > h1:first-child {
+				text-align: center;
+			}
+
+			#header.main .image.left {
+				float: none;
+				display: block;
+				width: auto;
+				max-width: min(24rem, 92%);
+				margin-left: auto;
+				margin-right: auto;
+				margin-bottom: 1em;
+			}
 
 		}
 

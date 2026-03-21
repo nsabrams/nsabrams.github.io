@@ -102,6 +102,29 @@
 			}
 		}
 
+		&.main {
+			// Home headshot: between uncapped 40% (too large) and a tight rem cap (too small)
+			.image.left {
+				max-width: min(20rem, 40%);
+			}
+
+			@include breakpoint('<=small') {
+				> h1:first-child {
+					text-align: center;
+				}
+
+				.image.left {
+					float: none;
+					display: block;
+					width: auto;
+					max-width: min(20rem, 92%);
+					margin-left: auto;
+					margin-right: auto;
+					margin-bottom: 1em;
+				}
+			}
+		}
+
 		body.is-preload & {
 			&.alt {
 				> * {

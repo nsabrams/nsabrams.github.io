@@ -36,6 +36,10 @@
 				display: block;
 				border-radius: 100%;
 				width: 16em;
+				max-width: min(16em, 100%);
+				height: auto;
+				aspect-ratio: 1;
+				object-fit: cover;
 			}
 		}
 
@@ -77,6 +81,9 @@
 
 				img {
 					width: 12em;
+					max-width: min(12em, 100%);
+					aspect-ratio: 1;
+					object-fit: cover;
 				}
 			}
 		}

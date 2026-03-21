@@ -3313,8 +3313,10 @@ input, select, textarea {
 		background-color: #ffffff;
 		color: #636363;
 		position: absolute;
-		width: 64em;
-		max-width: calc(100% - 4em);
+		left: 0;
+		right: 0;
+		width: auto;
+		max-width: none;
 		padding: 1em;
 		background-color: #f7f7f7;
 		border-top-left-radius: 0.25em;
@@ -3399,12 +3401,36 @@ input, select, textarea {
 		#nav.alt {
 			position: fixed;
 			top: 0;
+			left: 50%;
+			right: auto;
+			width: 64em;
+			max-width: calc(100% - 4em);
+			-moz-transform: translateX(-50%);
+			-webkit-transform: translateX(-50%);
+			-ms-transform: translateX(-50%);
+			transform: translateX(-50%);
 			padding: 0.5em 1em;
 			background-color: rgba(247, 247, 247, 0.95);
 			border-top-left-radius: 0;
 			border-top-right-radius: 0;
 			z-index: 10000;
 		}
+
+			@media screen and (max-width: 480px) {
+
+				#nav.alt {
+					max-width: calc(100% - 2em);
+				}
+
+			}
+
+			@media screen and (max-width: 360px) {
+
+				#nav.alt {
+					max-width: 100%;
+				}
+
+			}
 
 			#nav.alt ul li {
 				margin: 0 0.175em;
@@ -3417,8 +3443,6 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			#nav {
-				width: calc(100% - 4em);
-				max-width: calc(100% - 4em);
 				padding: 0.65em 0.5em;
 			}
 
@@ -3886,6 +3910,7 @@ input, select, textarea {
 /* Wrapper */
 
 	#wrapper {
+		position: relative;
 		width: 64em;
 		max-width: calc(100% - 4em);
 		margin: 0 auto;

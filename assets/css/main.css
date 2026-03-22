@@ -3403,8 +3403,8 @@ input, select, textarea {
 			top: 0;
 			left: 50%;
 			right: auto;
-			width: 64em;
-			max-width: calc(100% - 4em);
+			width: min(64em, calc(100vw - 4em));
+			max-width: min(64em, calc(100vw - 4em));
 			-moz-transform: translateX(-50%);
 			-webkit-transform: translateX(-50%);
 			-ms-transform: translateX(-50%);
@@ -3419,7 +3419,8 @@ input, select, textarea {
 			@media screen and (max-width: 480px) {
 
 				#nav.alt {
-					max-width: calc(100% - 2em);
+					width: min(64em, calc(100vw - 2em));
+					max-width: min(64em, calc(100vw - 2em));
 				}
 
 			}
@@ -3427,7 +3428,14 @@ input, select, textarea {
 			@media screen and (max-width: 360px) {
 
 				#nav.alt {
-					max-width: 100%;
+					left: 0;
+					right: 0;
+					width: auto;
+					max-width: none;
+					-moz-transform: none;
+					-webkit-transform: none;
+					-ms-transform: none;
+					transform: none;
 				}
 
 			}

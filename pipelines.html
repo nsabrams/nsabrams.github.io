@@ -1,0 +1,385 @@
+<!DOCTYPE HTML>
+<!--
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Natasha S. Abrams</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="icon" href="images/black_hole_crop.jpeg">
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<div id="wrapper">
+
+				<header id="header">
+					<h1>Pipelines</h1>
+					<p>Natasha S. Abrams <br>
+					UC Berkeley, Astronomy PhD Student
+				</p>
+				</header>
+
+				<nav id="nav">
+					<ul>
+						<li><a href="index.html">About Me</a></li>
+						<li><a href="research.html">Research</a></li>
+						<li><a href="pipelines.html" class="active">Pipelines</a></li>
+						<li><a href="outreach.html">Outreach</a></li>
+						<li><a href="CV.pdf" target="_blank">CV</a></li>
+					</ul>
+				</nav>
+
+				<div id="main">
+					<nav class="pipeline-toc" aria-label="Jump to a pipeline on this page">
+						<ul class="actions pipeline-toc__actions">
+							<li><a href="#pipeline-lens-mass" class="button primary">Measuring black hole masses</a></li>
+							<li><a href="#pipeline-simulate-events" class="button primary">Simulating microlensing populations</a></li>
+						</ul>
+					</nav>
+					<section id="pipeline-lens-mass" class="main pipeline-section-anchor">
+						<header class="major">
+							<h2>Measuring the Mass of Black Holes with Microlensing</h2>
+						</header>
+						<p>With joint photometric and astrometric microlensing data, we can break degeneracies between lens mass, relative proper motions between the lens and source, and relative distances between the lens and source. We can then measure the mass of the lens, discovering black holes with microlensing.</p>
+
+						<div class="pipeline-flow">
+							<button type="button" class="pipeline-step" data-open-dialog="dlg-surveys">
+								<span class="pipeline-step__title">Ground-based optical &amp; IR microlensing surveys</span>
+							</button>
+							<span class="pipeline-arrow" aria-hidden="true"><span class="pipeline-arrow__glyph">↓</span></span>
+							<button type="button" class="pipeline-step" data-open-dialog="dlg-select">
+								<span class="pipeline-step__title">Select BH candidate microlensing from alerts</span>
+							</button>
+							<span class="pipeline-arrow" aria-hidden="true"><span class="pipeline-arrow__glyph">↓</span></span>
+							<button type="button" class="pipeline-step pipeline-step--with-media" data-open-dialog="dlg-keck">
+								<span class="pipeline-step__media pipeline-step__media--photo">
+									<img src="images/keck_observing.png" alt="" loading="lazy" decoding="async" />
+								</span>
+								<span class="pipeline-step__title">Observe with Keck AO</span>
+							</button>
+							<span class="pipeline-arrow" aria-hidden="true"><span class="pipeline-arrow__glyph">↓</span></span>
+							<button type="button" class="pipeline-step pipeline-step--with-media" data-open-dialog="dlg-kai">
+								<span class="pipeline-step__media pipeline-step__media--logo">
+									<img src="images/kai_logo.png" alt="" loading="lazy" decoding="async" />
+								</span>
+								<span class="pipeline-step__title">Reduce with KAI (now without IRAF!)</span>
+							</button>
+							<span class="pipeline-arrow" aria-hidden="true"><span class="pipeline-arrow__glyph">↓</span></span>
+							<button type="button" class="pipeline-step" data-open-dialog="dlg-flystar">
+								<span class="pipeline-step__title">Align astrometry with FlyStar</span>
+							</button>
+							<span class="pipeline-arrow" aria-hidden="true"><span class="pipeline-arrow__glyph">↓</span></span>
+							<button type="button" class="pipeline-step pipeline-step--with-media" data-open-dialog="dlg-bagle">
+								<span class="pipeline-step__media pipeline-step__media--logo">
+									<img src="images/bagle_logo.png" alt="" loading="lazy" decoding="async" />
+								</span>
+								<span class="pipeline-step__title">Joint photometric–astrometric fit with BAGLE</span>
+							</button>
+							<span class="pipeline-arrow" aria-hidden="true"><span class="pipeline-arrow__glyph">↓</span></span>
+							<button type="button" class="pipeline-step" data-open-dialog="dlg-outcome">
+								<span class="pipeline-step__title">Lens masses &amp; classifications</span>
+							</button>
+						</div>
+					</section>
+
+					<section id="pipeline-simulate-events" class="main pipeline-section-anchor">
+						<header class="major">
+							<h2>Simulating a population of microlensing events</h2>
+						</header>
+						<p>We use PopSyCLE, a microlensing population synthesis code, to simulate realisitic populations of microlensing events. These can be used for forecasting, completeness corrections, and heirarchical inference to extract physical parameters such as the black hole mass function and binary fraction.</p>
+
+						<div class="pipeline-flow pipeline-flow--branching">
+							<button type="button" class="pipeline-step" data-open-dialog="dlg-sim-popsycle">
+								<span class="pipeline-step__title">Use PopSyCLE to simulate a population of microlensing events</span>
+							</button>
+							<div class="pipeline-arrow-fork" aria-hidden="true">
+								<span class="pipeline-arrow pipeline-arrow--diag pipeline-arrow--diag-r"><span class="pipeline-arrow__glyph">↓</span></span>
+								<span class="pipeline-arrow pipeline-arrow--diag pipeline-arrow--diag-l"><span class="pipeline-arrow__glyph">↓</span></span>
+							</div>
+							<div class="pipeline-branch-grid" role="presentation">
+								<div class="pipeline-branch">
+									<p class="pipeline-branch__caption">Observable statistics</p>
+									<button type="button" class="pipeline-step" data-open-dialog="dlg-sim-measured">
+										<figure class="pipeline-step__media pipeline-step__media--logo">
+											<img src="images/mroz17_real_vs_single_peak_Mrun_ogle.png" alt="OGLE tE distribution" width="1200" height="900" loading="lazy" decoding="async" />
+										</figure>
+										<span class="pipeline-step__title">Simulate distributions of microlensing parameters</span>
+									</button>
+								</div>
+								<div class="pipeline-branch">
+									<p class="pipeline-branch__caption">Event-level simulation</p>
+									<div class="pipeline-flow pipeline-flow--nested">
+										<div class="pipeline-outcome-row" role="presentation">
+											<button type="button" class="pipeline-step" data-open-dialog="dlg-sim-bagle-fwd">
+												<span class="pipeline-step__media pipeline-step__media--logo">
+													<img src="images/bagle_logo.png" alt="" loading="lazy" decoding="async" />
+												</span>
+												<span class="pipeline-step__title">Simulate individual microlensing events with BAGLE</span>
+											</button>
+										</div>
+										<div class="pipeline-arrow-fork" aria-hidden="true">
+											<span class="pipeline-arrow pipeline-arrow--diag pipeline-arrow--diag-r"><span class="pipeline-arrow__glyph">↓</span></span>
+											<span class="pipeline-arrow pipeline-arrow--diag pipeline-arrow--diag-l"><span class="pipeline-arrow__glyph">↓</span></span>
+										</div>
+										<div class="pipeline-outcome-row" role="presentation">
+											<button type="button" class="pipeline-step" data-open-dialog="dlg-sim-rubin">
+												<span class="pipeline-step__media pipeline-step__media--logo">
+													<img src="images/lightcurvelynx_ex.png" alt="" loading="lazy" decoding="async" />
+												</span>
+												<span class="pipeline-step__title">Simulate Rubin photometry with LightCurveLynx</span>
+											</button>
+											<button type="button" class="pipeline-step" data-open-dialog="dlg-sim-roman">
+												<figure class="pipeline-step__media pipeline-step__media--logo">
+													<img src="images/roman_GBTDS_ex.png" alt="" loading="lazy" decoding="async" />
+												</figure>
+												<span class="pipeline-step__title">Simulate Roman photometry and astromoetry with roman_GBTDS</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+
+				<footer id="footer">
+					<section>
+						<h2>Contact</h2>
+						<dl class="alt">
+							<dt>Address</dt>
+							<dd>Astronomy Department <br>
+501 Campbell Hall
+<br>
+University of California, Berkeley
+<br>
+Berkeley, CA 94720
+							</dd>
+							<dt>Email</dt>
+							<dd><a href="mailto:nsabrams@berkeley.edu">nsabrams@berkeley.edu</a></dd>
+							<dt>ORCID</dt>
+							<dd><a href="https://orcid.org/0000-0002-0287-3783" target="_blank"> 0000-0002-0287-3783 </a></dd>
+						</dl>
+					</section>
+					<p class="copyright">&copy; Natasha S. Abrams 2026. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+				</footer>
+
+		</div>
+
+		<dialog id="dlg-surveys" class="pipeline-modal" aria-labelledby="dlg-surveys-title">
+			<form method="dialog" class="pipeline-modal__close-form">
+				<button type="submit" class="pipeline-modal__close" aria-label="Close">&times;</button>
+			</form>
+			<h3 id="dlg-surveys-title">Ground-based optical &amp; infrared microlensing surveys</h3>
+			<p>Dedicated microlensing surveys monitor the Galactic bulge to discover microlensing events.</p>
+			<h4>Sources</h4>
+			<ul class="pipeline-modal__sources">
+				<li><a href="https://ogle.astrouw.edu.pl/ogle4/ews/ews.html" target="_blank" rel="noopener noreferrer">OGLE Early Warning System</a></li>
+				<li><a href="https://moaprime.massey.ac.nz/alerts" target="_blank" rel="noopener noreferrer">MOA and PRIME Alerts</a></li>
+				<li><a href="https://kmtnet.kasi.re.kr/ulens/" target="_blank" rel="noopener noreferrer">KMTNet Alerts</a></li>
+			</ul>
+		</dialog>
+
+		<dialog id="dlg-select" class="pipeline-modal" aria-labelledby="dlg-select-title">
+			<form method="dialog" class="pipeline-modal__close-form">
+				<button type="submit" class="pipeline-modal__close" aria-label="Close">&times;</button>
+			</form>
+			<h3 id="dlg-select-title">Select BH candidate microlensing from alerts</h3>
+			<p>Microlensing events with long Einstein crossing times and low microlensing parallax are selected for astrometric follow-up.</p>
+			<figure class="pipeline-modal__figure">
+				<img src="images/tE_piE_popsycle.png" alt="Einstein timescale and microlensing parallax diagram from PopSyCLE selection criteria" width="1200" height="900" loading="lazy" decoding="async" />
+			</figure>
+			<h4>Sources</h4>
+			<ul class="pipeline-modal__sources">
+				<li><a href="https://ui.adsabs.harvard.edu/abs/2020ApJ...889...31L/abstract" target="_blank" rel="noopener noreferrer">PopSyCLE shows black hole selection criteria (Lam+ 2020)</a></li>
+			</ul>
+		</dialog>
+
+		<dialog id="dlg-keck" class="pipeline-modal" aria-labelledby="dlg-keck-title">
+			<form method="dialog" class="pipeline-modal__close-form">
+				<button type="submit" class="pipeline-modal__close" aria-label="Close">&times;</button>
+			</form>
+			<h3 id="dlg-keck-title">Observe with Keck AO</h3>
+			<p>High-resolution imaging with Keck adaptive optics (with NIRC2 and OSIRIS) can measure the astrometric shift caused by microlensing.</p>
+			<h4>Sources</h4>
+			<ul class="pipeline-modal__sources">
+				<li><a href="https://ui.adsabs.harvard.edu/abs/2016ApJ...830...41L/abstract" target="_blank" rel="noopener noreferrer">Lu+ 2016</a></li>
+			</ul>
+		</dialog>
+
+		<dialog id="dlg-kai" class="pipeline-modal" aria-labelledby="dlg-kai-title">
+			<form method="dialog" class="pipeline-modal__close-form">
+				<button type="submit" class="pipeline-modal__close" aria-label="Close">&times;</button>
+			</form>
+			<h3 id="dlg-kai-title">Reduce with KAI</h3>
+			<p>The Keck AO Imaging (KAI) data reduction pipeline processes raw Keck images and produces catalogs of photometry and astrometry for each epoch. Note, the pipeline is no longer dependent on IRAF!</p>
+			<h4>Sources</h4>
+			<ul class="pipeline-modal__sources">
+				<li><a href="https://github.com/Keck-DataReductionPipelines/KAI/tree/dev" target="_blank" rel="noopener noreferrer">KAI on GitHub</a></li>
+			</ul>
+		</dialog>
+
+		<dialog id="dlg-flystar" class="pipeline-modal" aria-labelledby="dlg-flystar-title">
+			<form method="dialog" class="pipeline-modal__close-form">
+				<button type="submit" class="pipeline-modal__close" aria-label="Close">&times;</button>
+			</form>
+			<h3 id="dlg-flystar-title">Align astrometry with FlyStar</h3>
+			<p>FlyStar cross-matches reference stars and transforms detector coordinates into a common astrometric frame, tying Keck AO epochs to survey or Gaia reference catalogs.</p>
+			<h4>Sources</h4>
+			<ul class="pipeline-modal__sources">
+				<li><a href="https://github.com/MovingUniverseLab/flystar" target="_blank" rel="noopener noreferrer">FlyStar on GitHub</a></li>
+			</ul>
+		</dialog>
+
+		<dialog id="dlg-bagle" class="pipeline-modal" aria-labelledby="dlg-bagle-title">
+			<form method="dialog" class="pipeline-modal__close-form">
+				<button type="submit" class="pipeline-modal__close" aria-label="Close">&times;</button>
+			</form>
+			<h3 id="dlg-bagle-title">Joint photometric–astrometric fit with BAGLE</h3>
+			<p>BAGLE (Bayesian Analysis of Gravitational Lensing Events) performs nested sampling, multi-dataset fits combining survey photometry with high-resolution astrometry to infer microlensing parameters and lens masses.</p>
+			<h4>Sources</h4>
+			<ul class="pipeline-modal__sources">
+				<li><a href="https://github.com/MovingUniverseLab/BAGLE_Microlensing" target="_blank" rel="noopener noreferrer">BAGLE_Microlensing on GitHub</a></li>
+				<li><a href="https://ui.adsabs.harvard.edu/abs/2025arXiv251203364L/abstract" target="_blank" rel="noopener noreferrer">BAGLE paper (Lu+ 2026)</a></li>
+				<li><a href="https://ui.adsabs.harvard.edu/abs/2025arXiv251203392D/abstract" target="_blank" rel="noopener noreferrer">BAGLE binary paper (Bhadra+ 2026)</a></li>
+			</ul>
+		</dialog>
+
+		<dialog id="dlg-outcome" class="pipeline-modal" aria-labelledby="dlg-outcome-title">
+			<form method="dialog" class="pipeline-modal__close-form">
+				<button type="submit" class="pipeline-modal__close" aria-label="Close">&times;</button>
+			</form>
+			<h3 id="dlg-outcome-title">Lens masses &amp; classifications</h3>
+			<p>Combined analysis yields physical lens properties, including mass estimates and the likelihood that the lens is a dark remnant (for example a black hole or neutron star) versus a luminous star, informing the Galactic compact-object mass function.</p>
+			<h4>Sources</h4>
+			<ul class="pipeline-modal__sources">
+				<li><a href="https://ui.adsabs.harvard.edu/abs/2016ApJ...830...41L/abstract" target="_blank" rel="noopener noreferrer">Lu+ 2016</a></li>
+				<li><a href="https://ui.adsabs.harvard.edu/abs/2022ApJ...933L..23L/abstract" target="_blank" rel="noopener noreferrer">Lam+ 2022</a></li>
+			</ul>
+		</dialog>
+
+		<dialog id="dlg-sim-popsycle" class="pipeline-modal" aria-labelledby="dlg-sim-popsycle-title">
+			<form method="dialog" class="pipeline-modal__close-form">
+				<button type="submit" class="pipeline-modal__close" aria-label="Close">&times;</button>
+			</form>
+			<h3 id="dlg-sim-popsycle-title">PopSyCLE</h3>
+			<p>PopSyCLE is a microlensing population synthesis code to generate synthetic microlensing events. It uses Galaxia to generate stellar density and kinematics and SPISEA for compact objects and binary companions.</p>
+			<h4>PopSyCLE Sources</h4>
+			<ul class="pipeline-modal__sources">
+				<li><a href="https://ui.adsabs.harvard.edu/abs/2020ApJ...889...31L/abstract" target="_blank" rel="noopener noreferrer">PopSyCLE (Lam+ 2020)</a></li>
+				<li><a href="https://ui.adsabs.harvard.edu/abs/2022ApJ...941..116R/abstract" target="_blank" rel="noopener noreferrer">PopSyCLE IFMR (Rose+ 2022)</a></li>
+				<li><a href="https://ui.adsabs.harvard.edu/abs/2025ApJ...980..103A/abstract" target="_blank" rel="noopener noreferrer">PopSyCLE Binaries (Abrams+ 2025)</a></li>
+				<li><a href="https://github.com/jluastro/PopSyCLE" target="_blank" rel="noopener noreferrer">PopSyCLE on GitHub</a></li>
+				<li><a href="https://w.astro.berkeley.edu/popsycle/" target="_blank" rel="noopener noreferrer">PopSyCLE Simulation Catalog</a></li>
+			</ul>
+			<h4>SPISEA Sources</h4>
+			<ul class="pipeline-modal__sources">
+				<li><a href="https://ui.adsabs.harvard.edu/abs/2020AJ....160..143H/abstract" target="_blank" rel="noopener noreferrer">SPISEA (Hosek+ 2020)</a></li>
+				<li><a href="https://github.com/astropy/SPISEA" target="_blank" rel="noopener noreferrer">SPISEA on GitHub</a></li>
+			</ul>
+			<h4>Galaxia Sources</h4>
+			<ul class="pipeline-modal__sources">
+				<li><a href="https://ui.adsabs.harvard.edu/abs/2011ApJ...730....3S/abstract" target="_blank" rel="noopener noreferrer">Galaxia (Sharma+ 2011)</a></li>
+				<li><a href="https://github.com/jluastro/galaxia" target="_blank" rel="noopener noreferrer">Galaxia on GitHub</a></li>
+			</ul>
+		</dialog>
+
+		<dialog id="dlg-sim-measured" class="pipeline-modal" aria-labelledby="dlg-sim-measured-title">
+			<form method="dialog" class="pipeline-modal__close-form">
+				<button type="submit" class="pipeline-modal__close" aria-label="Close">&times;</button>
+			</form>
+			<h3 id="dlg-sim-measured-title">Simulated distributions of microlensing parameters</h3>
+			<p>From PopSyCLE, we can make observability cuts on output events and produce simulated distributions of microlensing parameters.</p>
+			<figure class="pipeline-modal__figure">
+				<img src="images/mroz17_real_vs_single_peak_Mrun_ogle.png" alt="OGLE tE distribution" width="1200" height="900" loading="lazy" decoding="async" />
+			</figure>
+			<h4>Source</h4>
+			<ul class="pipeline-modal__sources">
+				<li><a href="https://ui.adsabs.harvard.edu/abs/2025ApJ...980..103A/abstract" target="_blank" rel="noopener noreferrer">PopSyCLE Binaries (Abrams+ 2025)</a></li>
+			</ul>
+		</dialog>
+
+		<dialog id="dlg-sim-bagle-fwd" class="pipeline-modal" aria-labelledby="dlg-sim-bagle-fwd-title">
+			<form method="dialog" class="pipeline-modal__close-form">
+				<button type="submit" class="pipeline-modal__close" aria-label="Close">&times;</button>
+			</form>
+			<h3 id="dlg-sim-bagle-fwd-title">Simulate individual microlensing events with BAGLE</h3>
+			<p>BAGLE can simulate microlensing events including binary lens, binary source, or both with any given time series.</p>
+			<h4>Sources</h4>
+			<ul class="pipeline-modal__sources">
+				<li><a href="https://github.com/MovingUniverseLab/BAGLE_Microlensing" target="_blank" rel="noopener noreferrer">BAGLE_Microlensing on GitHub</a></li>
+				<li><a href="https://ui.adsabs.harvard.edu/abs/2025arXiv251203364L/abstract" target="_blank" rel="noopener noreferrer">BAGLE paper (Lu+ 2026)</a></li>
+				<li><a href="https://ui.adsabs.harvard.edu/abs/2025arXiv251203392D/abstract" target="_blank" rel="noopener noreferrer">BAGLE binary paper (Bhadra+ 2026)</a></li>
+			</ul>
+		</dialog>
+
+
+		<dialog id="dlg-sim-gbtds" class="pipeline-modal" aria-labelledby="dlg-sim-gbtds-title">
+			<form method="dialog" class="pipeline-modal__close-form">
+				<button type="submit" class="pipeline-modal__close" aria-label="Close">&times;</button>
+			</form>
+			<h3 id="dlg-sim-gbtds-title">roman_GBTDS</h3>
+			<p>The Roman Galactic Bulge Time Domain Survey (GBTDS) simulation module produces Roman-like photometric and astrometric time series—encoding the microlensing signal, pixelization, and relative astrometry relevant to Roman’s crowded bulge fields.</p>
+		</dialog>
+
+		<dialog id="dlg-sim-rubin" class="pipeline-modal" aria-labelledby="dlg-sim-rubin-title">
+			<form method="dialog" class="pipeline-modal__close-form">
+				<button type="submit" class="pipeline-modal__close" aria-label="Close">&times;</button>
+			</form>
+			<h3 id="dlg-sim-rubin-title">Simulate Rubin photometry with LightCurveLynx</h3>
+			<p>With a built-in wrapper around BAGLE, LightCurveLynx simulates microlensing photometry with Rubin cadence and noise.</p>
+			<figure class="pipeline-modal__figure">
+				<img src="images/lightcurvelynx_ex.png" alt="" loading="lazy" decoding="async" />
+			</span>
+			<h4>Sources</h4>
+			<ul class="pipeline-modal__sources">
+				<li><a href="https://github.com/LSST-TVSSC/microlensing/blob/main/lightcurvelynx_simulations/lightcurvelynx_BAGLE.ipynb" target="_blank" rel="noopener noreferrer">Simulating a BAGLE microlensing event with LightCurveLynx</a></li>
+				<li><a href="https://github.com/lincc-frameworks/lightcurvelynx/blob/main/docs/notebooks/pre_executed/wrapping_bagle.ipynb" target="_blank" rel="noopener noreferrer">LightCurveLynx BAGLE wrapper</a></li>
+			</ul>
+		</dialog>
+
+		<dialog id="dlg-sim-roman" class="pipeline-modal" aria-labelledby="dlg-sim-roman-title">
+			<form method="dialog" class="pipeline-modal__close-form">
+				<button type="submit" class="pipeline-modal__close" aria-label="Close">&times;</button>
+			</form>
+			<h3 id="dlg-sim-roman-title">Simulate Roman photometry and astromoetry with roman_GBTDS</h3>
+			<p>The Roman Galactic Bulge Time Domain Survey (GBTDS) simulation module produces Roman-like photometric and astrometric time from BAGLE microlensing events. It includes the capability to bin the astrometry.</p>
+			<figure class="pipeline-modal__figure">
+				<img src="images/roman_GBTDS_ex.png" alt="" loading="lazy" decoding="async" />
+			</figure>
+			<h4>Sources</h4>
+			<ul class="pipeline-modal__sources">
+				<li><a href="https://github.com/MovingUniverseLab/roman_GBTDS" target="_blank" rel="noopener noreferrer">roman_GBTDS on GitHub</a></li>
+			</ul>
+		</dialog>
+
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script>
+			(function () {
+				document.querySelectorAll('[data-open-dialog]').forEach(function (btn) {
+					btn.addEventListener('click', function () {
+						var id = btn.getAttribute('data-open-dialog');
+						var dlg = document.getElementById(id);
+						if (dlg && typeof dlg.showModal === 'function') dlg.showModal();
+					});
+				});
+				document.querySelectorAll('dialog.pipeline-modal').forEach(function (dlg) {
+					dlg.addEventListener('click', function (e) {
+						if (e.target === dlg) dlg.close();
+					});
+				});
+			})();
+		</script>
+
+	</body>
+</html>

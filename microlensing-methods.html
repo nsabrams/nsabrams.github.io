@@ -1,0 +1,424 @@
+<!DOCTYPE HTML>
+<!--
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Natasha S. Abrams</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="icon" href="images/black_hole_crop.jpeg">
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<div id="wrapper">
+
+			<header id="header">
+				<h1>Microlensing Methods</h1>
+				<p>Natasha S. Abrams <br>
+				UC Berkeley, Astronomy PhD Student
+			</p>
+			</header>
+
+			<nav id="nav">
+				<ul>
+					<li><a href="index.html">About Me</a></li>
+					<li><a href="research.html">Research</a></li>
+					<li><a href="pipelines.html">Pipelines</a></li>
+					<li><a href="software.html">Software</a></li>
+					<li><a href="microlensing-methods.html" class="active">Methods</a></li>
+					<li><a href="outreach.html">Outreach</a></li>
+					<li><a href="CV.pdf" target="_blank">CV</a></li>
+				</ul>
+			</nav>
+
+			<div id="main">
+				<section id="content" class="main">
+					<header class="major">
+						<h2>Ways to measure and interpret microlensing</h2>
+						<p>Explore the same set of methods organized either by the lens populations they can constrain or by the surveys that provide the relevant measurements.</p>
+					</header>
+
+					<div class="methods-browser">
+						<div class="methods-browser__controls" role="group" aria-label="Microlensing method views">
+							<button type="button" class="methods-browser__toggle is-active" data-view-toggle="lensType" aria-pressed="true">By lens type</button>
+							<button type="button" class="methods-browser__toggle" data-view-toggle="survey" aria-pressed="false">By survey</button>
+						</div>
+
+						<div id="methods-browser-filters" class="methods-browser__filters" role="group" aria-label="Microlensing method filters"></div>
+
+						<p class="methods-browser__intro" id="methods-browser-description">
+							Select a view to regroup the methods below.
+						</p>
+
+						<div id="methods-browser-results" class="methods-browser__results" aria-live="polite"></div>
+					</div>
+				</section>
+			</div>
+
+			<footer id="footer">
+				<section>
+					<h2>Contact</h2>
+					<dl class="alt">
+						<dt>Address</dt>
+						<dd>Astronomy Department <br>
+501 Campbell Hall
+<br>
+University of California, Berkeley
+<br>
+Berkeley, CA 94720
+						</dd>
+						<dt>Email</dt>
+						<dd><a href="mailto:nsabrams@berkeley.edu">nsabrams@berkeley.edu</a></dd>
+						<dt>ORCID</dt>
+						<dd><a href="https://orcid.org/0000-0002-0287-3783" target="_blank"> 0000-0002-0287-3783 </a></dd>
+					</dl>
+				</section>
+				<p class="copyright">&copy; Natasha S. Abrams 2026. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+			</footer>
+
+		</div>
+
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script>
+			(function () {
+				var surveys = [
+					{
+						id: 'rubin',
+						name: 'Rubin',
+						summary: 'Provides wide-field time-domain photometric measurements suited to stars, binaries, exoplanets, white dwarfs, neutron stars, and black hole candidates. This enables measurement of these objects and Galactic structure throughout the Southern Galaxy.'
+					},
+					{
+						id: 'roman',
+						name: 'Roman',
+						summary: 'Provides dense space-based photometry and astrometric measurements, especially powerful for exoplanets, binaries, and dark compact objects in the bulge. It is infrared, so it can measure microlensing towards the Galactic center.'
+					},
+					{
+						id: 'gaia',
+						name: 'Gaia',
+						summary: 'Provides high-precision astrometric measurements with supporting photometry, enabling lens-mass constraints for luminous and dark lenses. Note all astrometry is 1D.'
+					},
+					{
+						id: 'ogle',
+						name: 'OGLE',
+						summary: 'Provides long-baseline, high cadence survey photometry for discovering and characterizing microlensing events in the Galactic bulge, LMC, and SMC.'
+					},
+					{
+						id: 'moa',
+						name: 'MOA',
+						summary: 'Provides long-baseline, high cadence survey photometry for discovering and characterizing microlensing events in the Galactic bulge, with particular emphasis on exoplanets.'
+					},
+					{
+						id: 'kmtnet',
+						name: 'KMTNet',
+						summary: 'Provides long-baseline, high cadence survey photometry for discovering and characterizing microlensing events in the Galactic bulge, with particular emphasis on exoplanets.'
+					},
+					{
+						id: 'prime',
+						name: 'PRIME',
+						summary: 'Provides infrared, high-cadence photometry for discovering and characterizing microlensing events in the Galactic bulge and center.'
+					},
+					{
+						id: 'ztf',
+						name: 'ZTF',
+						summary: 'Provides wide-field time-domain photometric measurements suited to stars, binaries, exoplanets, white dwarfs, neutron stars, and black hole candidates. This enables measurement of these objects and Galactic structure throughout the Northern Galaxy.'
+					},
+					{
+						id: 'keck',
+						name: 'Keck AO',
+						summary: 'Provides high-resolution astrometric follow-up and imaging that can break degeneracies in individual planetary events and candidate dark-remnant events.'
+					},
+					{
+						id: 'hst',
+						name: 'HST',
+						summary: 'Provides high-resolution astrometric follow-up and imaging that can break degeneracies in individual planetary events and candidate dark-remnant events.'
+					},
+					{
+						id: 'jwst',
+						name: 'JWST',
+						summary: 'Provides high-resolution astrometric follow-up and imaging that can break degeneracies in individual planetary events and candidate dark-remnant events.'
+					}
+				];
+
+				var methods = [
+					{
+						name: 'Photometry of an individual event',
+						description: 'Fit a microlensing light curve to infer timescale, impact parameter, and event geometry from brightness changes alone. Determination of lens class requires a Galactic model.',
+						lensTypes: ['Stars', 'White dwarfs', 'Neutron stars', 'Black holes', 'Binaries', 'Exoplanets'],
+						observables: ['Photometry'],
+						surveys: ['ogle', 'moa', 'kmtnet', 'ztf', 'rubin', 'roman', 'prime', 'gaia']
+					},
+					{
+						name: 'Photometry + astrometry of an individual event',
+						description: 'Combine the light curve with centroid shifts to better constrain lens mass, distances, and relative proper motion.',
+						lensTypes: ['Stars', 'White dwarfs', 'Neutron stars', 'Black holes', 'Binaries'],
+						observables: ['Photometry', 'Astrometry'],
+						surveys: ['gaia', 'roman', 'keck', 'ogle']
+					},
+					{
+						name: 'Finite-source effects',
+						description: 'Finite-source effects occur when the Einstein ring of the lens is small compared to the source size. Use source-size signatures during caustic crossings or high-magnification events to measure angular scales and break model degeneracies. Determination of lens class requires a measurement of the source distance or is dependent on a Galactic model.',
+						lensTypes: ['Exoplanets', 'Binaries', 'Stars'],
+						observables: ['Photometry', 'Finite source'],
+						surveys: ['roman', 'moa', 'kmtnet', 'ogle', 'prime']
+					},
+					{
+						name: 'Microlensing parallax',
+						description: 'Measure parallax distortions from the observer motion (annual parallax) or multi-observatory baselines (satellite parallax, i.e. Roman to Prime baseline) to constrain the physical scale of the event.',
+						lensTypes: ['Black holes', 'Neutron stars', 'White dwarfs', 'Stars', 'Binaries'],
+						observables: ['Photometry', 'Parallax'],
+						surveys: ['ogle', 'rubin', 'roman', 'ztf', 'moa', 'prime', 'gaia', 'kmtnet']
+					},
+					{
+						name: 'Binary-lens caustic modeling',
+						description: 'Model caustic crossings and anomaly structure to infer binary mass ratios, projected separations, and orbital configurations.',
+						lensTypes: ['Binaries', 'Exoplanets'],
+						observables: ['Photometry', 'Caustics'],
+						surveys: ['moa', 'kmtnet', 'ogle', 'roman', 'prime']
+					},
+					{
+						name: 'Binary-source modeling',
+						description: 'Account for multiple lensed source stars to identify source multiplicity when interpreting the event.',
+						lensTypes: ['Stars', 'Binaries'],
+						observables: ['Photometry', 'Astrometry'],
+						surveys: ['ogle', 'rubin', 'roman', 'ztf', 'moa', 'prime', 'gaia', 'kmtnet']
+					},
+					{
+						name: 'Lens-flux constraints with high-resolution imaging',
+						description: 'Use high-resolution imaging to detect or limit blended lens light and distinguish luminous lenses from dark remnants.',
+						lensTypes: ['Stars', 'White dwarfs', 'Neutron stars', 'Black holes', 'Binaries'],
+						observables: ['Imaging', 'Photometry'],
+						surveys: ['keck', 'roman', 'hst', 'jwst']
+					},
+					{
+						name: 'Late-time follow-up',
+						description: 'Use high-resolution imaging to detect lens and source separately years after the event. This can put constraints on the lens and source masses, distances, and relative proper motion.',
+						lensTypes: ['Exoplanets', 'Stars', 'Binaries'],
+						observables: ['Imaging', 'Photometry'],
+						surveys: ['keck', 'roman', 'hst', 'jwst']
+					},
+					{
+						name: 'Survey event statistics and population inference',
+						description: 'Use ensembles of detected events, timescales, and efficiencies to constrain the demographics of stars, binaries, planets, and compact remnants.',
+						lensTypes: ['Stars', 'White dwarfs', 'Neutron stars', 'Black holes', 'Binaries', 'Exoplanets'],
+						observables: ['Population statistics'],
+						surveys: ['rubin', 'roman', 'ogle', 'moa', 'kmtnet', 'ztf', 'prime', 'gaia']
+					}
+				];
+
+				var surveyById = {};
+				surveys.forEach(function (survey) {
+					surveyById[survey.id] = survey;
+				});
+
+				var currentView = 'lensType';
+				var currentFilter = 'all';
+				var results = document.getElementById('methods-browser-results');
+				var filters = document.getElementById('methods-browser-filters');
+				var description = document.getElementById('methods-browser-description');
+				var toggles = Array.prototype.slice.call(document.querySelectorAll('[data-view-toggle]'));
+
+				function compareText(a, b) {
+					return a.localeCompare(b, undefined, { sensitivity: 'base' });
+				}
+
+				function getFilterOptions(view) {
+					if (view === 'survey') {
+						return surveys.map(function (survey) {
+							return {
+								key: survey.id,
+								label: survey.name
+							};
+						});
+					}
+
+					var seen = {};
+					methods.forEach(function (method) {
+						method.lensTypes.forEach(function (lensType) {
+							seen[lensType] = true;
+						});
+					});
+
+					return Object.keys(seen).sort(compareText).map(function (lensType) {
+						return {
+							key: lensType,
+							label: lensType
+						};
+					});
+				}
+
+				function groupMethods(view) {
+					var groups = {};
+
+					methods.forEach(function (method) {
+						var keys = view === 'survey' ? method.surveys : method.lensTypes;
+						keys.forEach(function (key) {
+							if (currentFilter !== 'all' && key !== currentFilter) return;
+							if (!groups[key]) groups[key] = [];
+							groups[key].push(method);
+						});
+					});
+
+					return Object.keys(groups).sort(compareText).map(function (key) {
+						return {
+							key: key,
+							label: view === 'survey' ? surveyById[key].name : key,
+							summary: view === 'survey' ? surveyById[key].summary : '',
+							methods: groups[key].slice().sort(function (a, b) {
+								return compareText(a.name, b.name);
+							})
+						};
+					});
+				}
+
+				function renderFilters() {
+					var options = getFilterOptions(currentView);
+					filters.innerHTML = '';
+
+					var allButton = document.createElement('button');
+					allButton.type = 'button';
+					allButton.className = 'methods-browser__filter' + (currentFilter === 'all' ? ' is-active' : '');
+					allButton.textContent = currentView === 'lensType' ? 'All lens types' : 'All surveys';
+					allButton.setAttribute('aria-pressed', currentFilter === 'all' ? 'true' : 'false');
+					allButton.addEventListener('click', function () {
+						currentFilter = 'all';
+						renderFilters();
+						render();
+					});
+					filters.appendChild(allButton);
+
+					options.forEach(function (option) {
+						var button = document.createElement('button');
+						button.type = 'button';
+						button.className = 'methods-browser__filter' + (currentFilter === option.key ? ' is-active' : '');
+						button.textContent = option.label;
+						button.setAttribute('aria-pressed', currentFilter === option.key ? 'true' : 'false');
+						button.addEventListener('click', function () {
+							currentFilter = option.key;
+							renderFilters();
+							render();
+						});
+						filters.appendChild(button);
+					});
+				}
+
+				function renderTagList(items, label) {
+					var wrapper = document.createElement('div');
+					wrapper.className = 'methods-browser__meta';
+
+					var title = document.createElement('span');
+					title.className = 'methods-browser__meta-label';
+					title.textContent = label;
+					wrapper.appendChild(title);
+
+					items.forEach(function (item) {
+						var tag = document.createElement('span');
+						tag.className = 'methods-browser__tag';
+						tag.textContent = item;
+						wrapper.appendChild(tag);
+					});
+
+					return wrapper;
+				}
+
+				function render() {
+					var groups = groupMethods(currentView);
+					results.innerHTML = '';
+
+					description.textContent = currentView === 'lensType'
+						? (currentFilter === 'all'
+							? 'Methods are grouped by the types of lenses they can help identify or characterize.'
+							: 'Showing only methods associated with the selected lens type.')
+						: (currentFilter === 'all'
+							? 'Methods are grouped by survey or facility, with a short note describing what each one contributes.'
+							: 'Showing only methods associated with the selected survey or facility.');
+
+					groups.forEach(function (group) {
+						var section = document.createElement('section');
+						section.className = 'methods-group';
+
+						var heading = document.createElement('header');
+						heading.className = 'methods-group__header';
+
+						var title = document.createElement('h3');
+						title.className = 'methods-group__title';
+						title.textContent = group.label;
+						heading.appendChild(title);
+
+						if (group.summary) {
+							var summary = document.createElement('p');
+							summary.className = 'methods-group__summary';
+							summary.textContent = group.summary;
+							heading.appendChild(summary);
+						}
+
+						section.appendChild(heading);
+
+						var grid = document.createElement('div');
+						grid.className = 'methods-group__grid';
+
+						group.methods.forEach(function (method) {
+							var card = document.createElement('article');
+							card.className = 'method-card';
+
+							var name = document.createElement('h4');
+							name.className = 'method-card__title';
+							name.textContent = method.name;
+							card.appendChild(name);
+
+							var body = document.createElement('p');
+							body.className = 'method-card__description';
+							body.textContent = method.description;
+							card.appendChild(body);
+
+							card.appendChild(renderTagList(method.observables, 'Observables'));
+
+							if (currentView === 'lensType') {
+								card.appendChild(renderTagList(method.surveys.map(function (surveyId) {
+									return surveyById[surveyId].name;
+								}), 'Surveys'));
+							} else {
+								card.appendChild(renderTagList(method.lensTypes, 'Lens types'));
+							}
+
+							grid.appendChild(card);
+						});
+
+						section.appendChild(grid);
+						results.appendChild(section);
+					});
+				}
+
+				toggles.forEach(function (toggle) {
+					toggle.addEventListener('click', function () {
+						currentView = toggle.getAttribute('data-view-toggle');
+						currentFilter = 'all';
+
+						toggles.forEach(function (btn) {
+							var isActive = btn === toggle;
+							btn.classList.toggle('is-active', isActive);
+							btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+						});
+
+						renderFilters();
+						render();
+					});
+				});
+
+				renderFilters();
+				render();
+			})();
+		</script>
+
+	</body>
+</html>

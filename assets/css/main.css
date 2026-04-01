@@ -3942,6 +3942,141 @@ input, select, textarea {
 
 /* Pipelines page: in-page jumps + lens / simulation flows */
 
+	.methods-browser {
+		display: flex;
+		flex-direction: column;
+		gap: 1.75rem;
+	}
+
+	.methods-browser__controls {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.75rem;
+		justify-content: center;
+		margin: 0;
+	}
+
+	.methods-browser__toggle {
+		min-width: min(100%, 12rem);
+	}
+
+	#main .methods-browser__toggle.is-active {
+		background-color: #5f4d93;
+		color: #ffffff !important;
+		box-shadow: none;
+	}
+
+	#main .methods-browser__toggle.is-active:hover {
+		background-color: #6d58a8;
+	}
+
+	#main .methods-browser__toggle.is-active:active {
+		background-color: #4f3f7e;
+	}
+
+	.methods-browser__intro {
+		margin: 0;
+		text-align: center;
+	}
+
+	.methods-browser__filters {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.6rem;
+		justify-content: center;
+	}
+
+	.methods-browser__filter {
+		min-width: 0;
+		height: auto;
+		padding-top: 0.55rem;
+		padding-bottom: 0.55rem;
+		line-height: 1.3;
+		white-space: normal;
+	}
+
+	#main .methods-browser__filter.is-active {
+		background-color: rgba(95, 77, 147, 0.12);
+		box-shadow: inset 0 0 0 1px #5f4d93;
+		color: #5f4d93 !important;
+	}
+
+	.methods-browser__results {
+		display: flex;
+		flex-direction: column;
+		gap: 2.5rem;
+	}
+
+	.methods-group + .methods-group {
+		padding-top: 2.5rem;
+		border-top: solid 1px #dddddd;
+	}
+
+	.methods-group__header {
+		margin-bottom: 1.25rem;
+	}
+
+	.methods-group__title {
+		margin-bottom: 0.35rem;
+	}
+
+	.methods-group__summary {
+		margin-bottom: 0;
+	}
+
+	.methods-group__grid {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 1.25rem;
+	}
+
+	.method-card {
+		display: flex;
+		flex-direction: column;
+		gap: 0.85rem;
+		height: 100%;
+		padding: 1.35rem;
+		border: solid 1px #dddddd;
+		border-radius: 0.5rem;
+		background: rgba(222, 222, 222, 0.13);
+	}
+
+	.method-card__title,
+	.method-card__description {
+		margin-bottom: 0;
+	}
+
+	.methods-browser__meta {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.45rem;
+	}
+
+	.methods-browser__meta-label {
+		font-weight: 400;
+		color: #636363;
+	}
+
+	.methods-browser__tag {
+		display: inline-flex;
+		align-items: center;
+		padding: 0.2rem 0.7rem;
+		border-radius: 999px;
+		background: rgba(95, 77, 147, 0.12);
+		color: #5f4d93;
+		font-size: 0.9em;
+		line-height: 1.35;
+	}
+
+	@media screen and (max-width: 736px) {
+
+		.methods-group__grid {
+			grid-template-columns: 1fr;
+		}
+
+	}
+
 	.pipeline-toc {
 		display: flex;
 		justify-content: center;

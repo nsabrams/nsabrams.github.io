@@ -3958,20 +3958,27 @@ input, select, textarea {
 
 	.methods-browser__toggle {
 		min-width: min(100%, 12rem);
+		height: auto;
+		padding: 0.85rem 1.5rem;
+		line-height: 1.25;
+		border-radius: 0.75rem;
+		box-shadow: inset 0 0 0 2px #5f4d93;
+		color: #5f4d93 !important;
+		background-color: #ffffff;
 	}
 
 	#main .methods-browser__toggle.is-active {
-		background-color: #5f4d93;
+		background-color: #5f4d93 !important;
 		color: #ffffff !important;
-		box-shadow: none;
+		box-shadow: inset 0 0 0 2px #5f4d93 !important;
 	}
 
 	#main .methods-browser__toggle.is-active:hover {
-		background-color: #6d58a8;
+		background-color: #6d58a8 !important;
 	}
 
 	#main .methods-browser__toggle.is-active:active {
-		background-color: #4f3f7e;
+		background-color: #4f3f7e !important;
 	}
 
 	.methods-browser__intro {
@@ -3989,15 +3996,16 @@ input, select, textarea {
 	.methods-browser__filter {
 		min-width: 0;
 		height: auto;
-		padding-top: 0.55rem;
-		padding-bottom: 0.55rem;
+		padding: 0.55rem 1rem;
 		line-height: 1.3;
 		white-space: normal;
+		border-radius: 0.7rem;
+		background-color: #ffffff;
 	}
 
 	#main .methods-browser__filter.is-active {
-		background-color: rgba(95, 77, 147, 0.12);
-		box-shadow: inset 0 0 0 1px #5f4d93;
+		background-color: rgba(95, 77, 147, 0.14) !important;
+		box-shadow: inset 0 0 0 2px #5f4d93 !important;
 		color: #5f4d93 !important;
 	}
 

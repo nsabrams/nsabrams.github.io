@@ -1,0 +1,291 @@
+<!DOCTYPE HTML>
+<!--
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Natasha S. Abrams</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="icon" href="images/black_hole_crop.jpeg">
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			.software-entry {
+				display: block;
+			}
+
+			.software-entry + .software-entry {
+				margin-top: 3rem;
+				padding-top: 3rem;
+				border-top: solid 1px rgba(255, 255, 255, 0.08);
+			}
+
+			.software-entry__body {
+				display: grid;
+				grid-template-columns: minmax(0, 280px) minmax(0, 1fr);
+				gap: 2rem;
+				align-items: center;
+			}
+
+			.software-entry__body--no-logo {
+				grid-template-columns: 1fr;
+			}
+
+			.software-entry__body--no-logo .software-entry__logo {
+				display: none;
+			}
+
+			.software-entry__header {
+				margin-bottom: 1.5rem;
+			}
+
+			.software-entry__header.major {
+				margin-bottom: 1.5rem;
+			}
+
+			.software-entry__header.major h2 {
+				margin-bottom: 0;
+			}
+
+			.software-entry__title-row {
+				display: inline-flex;
+				align-items: flex-end;
+				gap: 0.75rem;
+			}
+
+			.software-entry__logo {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				min-height: 210px;
+			}
+
+			.software-entry__logo img {
+				max-width: 100%;
+				max-height: 210px;
+				object-fit: contain;
+			}
+
+			.software-entry__content p:last-of-type {
+				margin-bottom: 1rem;
+			}
+
+			.software-entry__sources {
+				margin-bottom: 0;
+			}
+
+			.software-link {
+				display: inline-flex;
+				align-items: center;
+				gap: 0.45rem;
+			}
+
+			.software-link__github {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				width: 4rem;
+				height: 4rem;
+				color: inherit;
+				transform: translateY(-4.5rem);
+			}
+
+			.software-link__github svg {
+				width: 100%;
+				height: 100%;
+				fill: currentColor;
+			}
+
+			@media screen and (max-width: 736px) {
+				.software-entry__body {
+					grid-template-columns: 1fr;
+					gap: 1.5rem;
+				}
+
+				.software-entry__logo {
+					justify-content: flex-start;
+				}
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<div id="wrapper">
+
+			<header id="header">
+				<h1>Software</h1>
+				<p>Natasha S. Abrams <br>
+				UC Berkeley, Astronomy PhD Student
+			</p>
+			</header>
+
+			<nav id="nav">
+				<ul>
+					<li><a href="index.html">About Me</a></li>
+					<li><a href="research.html">Research</a></li>
+					<li><a href="pipelines.html">Pipelines</a></li>
+					<li><a href="software.html" class="active">Software</a></li>
+					<li><a href="outreach.html">Outreach</a></li>
+					<li><a href="CV.pdf" target="_blank">CV</a></li>
+				</ul>
+			</nav>
+
+			<div id="main">
+				<section id="content" class="main">
+					<p>Here are the open-source software packages I develop and contribute to!</p>
+
+					<section class="software-entry">
+						<header class="major software-entry__header">
+							<div class="software-entry__title-row">
+								<h2>BAGLE</h2>
+								<a class="software-link__github" href="https://github.com/MovingUniverseLab/BAGLE_Microlensing" target="_blank" rel="noopener noreferrer" aria-label="BAGLE on GitHub"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8a8.01 8.01 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.65 7.65 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"></path></svg></a>
+							</div>
+						</header>
+						<div class="software-entry__body">
+							<div class="software-entry__logo">
+								<img src="images/bagle_logo.png" alt="BAGLE logo" loading="lazy" decoding="async" />
+							</div>
+							<div class="software-entry__content">
+								<p>BAGLE (Bayesian Analysis of Gravitational Lensing Events) is a microlensing modeling and fitting pacakage. It can generate microlensing lightcurves and astrometry for single and binary lenses and sources.
+									It also performs nested sampling fits on photometry or joint-photometric and astrometric data. It can be used to infer microlensing parameters and lens masses.</p>
+								<h3>Papers</h3>
+								<ul class="software-entry__sources">
+									<li><a href="https://ui.adsabs.harvard.edu/abs/2025arXiv251203364L/abstract" target="_blank" rel="noopener noreferrer">BAGLE paper (Lu+ 2026)</a></li>
+									<li><a href="https://ui.adsabs.harvard.edu/abs/2025arXiv251203392D/abstract" target="_blank" rel="noopener noreferrer">BAGLE binary paper (Bhadra+ 2026)</a></li>
+								</ul>
+							</div>
+						</div>
+					</section>
+
+					<section class="software-entry">
+						<header class="major software-entry__header">
+							<div class="software-entry__title-row">
+								<h2>PopSyCLE</h2>
+								<a class="software-link__github" href="https://github.com/MovingUniverseLab/PopSyCLE" target="_blank" rel="noopener noreferrer" aria-label="PopSyCLE on GitHub"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8a8.01 8.01 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.65 7.65 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"></path></svg></a>
+							</div>
+						</header>
+						<div class="software-entry__body software-entry__body--no-logo">
+							<div class="software-entry__logo"></div>
+							<div class="software-entry__content">
+								<p>PopSyCLE is a microlensing population synthesis code. It uses Galaxia to generate stellar density and kinematics and SPISEA for compact objects and binary companions.</p>
+								<h3>Papers</h3>
+								<ul class="software-entry__sources">
+									<li><a href="https://ui.adsabs.harvard.edu/abs/2020ApJ...889...31L/abstract" target="_blank" rel="noopener noreferrer">PopSyCLE (Lam+ 2020)</a></li>
+									<li><a href="https://ui.adsabs.harvard.edu/abs/2022ApJ...941..116R/abstract" target="_blank" rel="noopener noreferrer">PopSyCLE IFMR (Rose+ 2022)</a></li>
+									<li><a href="https://ui.adsabs.harvard.edu/abs/2025ApJ...980..103A/abstract" target="_blank" rel="noopener noreferrer">PopSyCLE Binaries (Abrams+ 2025)</a></li>
+									<li><a href="https://w.astro.berkeley.edu/popsycle/" target="_blank" rel="noopener noreferrer">PopSyCLE Simulation Catalog</a></li>
+								</ul>
+							</div>
+						</div>
+					</section>
+
+					<section class="software-entry">
+						<header class="major software-entry__header">
+							<div class="software-entry__title-row">
+								<h2>SPISEA</h2>
+								<a class="software-link__github" href="https://github.com/astropy/SPISEA" target="_blank" rel="noopener noreferrer" aria-label="SPISEA on GitHub"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8a8.01 8.01 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.65 7.65 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"></path></svg></a>
+							</div>
+						</header>
+						<div class="software-entry__body">
+							<div class="software-entry__logo">
+								<img src="images/spisea_logo.png" alt="SPISEA logo" loading="lazy" decoding="async" />
+							</div>
+							<div class="software-entry__content">
+								<p>SPISEA is a simple stellar population synthesis code that can generate single-age, single-metallicity populations.</p>
+								<h3>Papers</h3>
+								<ul class="software-entry__sources">
+									<li><a href="https://ui.adsabs.harvard.edu/abs/2020AJ....160..143H/abstract" target="_blank" rel="noopener noreferrer">SPISEA (Hosek+ 2020)</a></li>
+								</ul>
+							</div>
+						</div>
+					</section>
+
+					<section class="software-entry">
+						<header class="major software-entry__header">
+							<div class="software-entry__title-row">
+								<h2>PUZLE</h2>
+								<a class="software-link__github" href="https://github.com/jluastro/puzle" target="_blank" rel="noopener noreferrer" aria-label="FlyStar on GitHub"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8a8.01 8.01 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.65 7.65 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"></path></svg></a>
+							</div>
+						</header>
+						<div class="software-entry__body software-entry__body--no-logo">
+							<div class="software-entry__logo"></div>
+							<div class="software-entry__content">
+								<p>PUZLE is a Python package for discovering microlensing events in ZTF data. It performs successive filtering and fitting to identify microlensing events.</p>
+								<h3>Papers</h3>
+								<ul class="software-entry__sources">
+									<li><a href="https://ui.adsabs.harvard.edu/abs/2023ApJ...947...24M/abstract" target="_blank" rel="noopener noreferrer">Medford & Abrams+ 2023</a></li>
+								</ul>
+							</div>
+						</div>
+					</section>
+
+					<section class="software-entry">
+						<header class="major software-entry__header">
+							<div class="software-entry__title-row">
+								<h2>KAI</h2>
+								<a class="software-link__github" href="https://github.com/Keck-DataReductionPipelines/KAI/tree/dev" target="_blank" rel="noopener noreferrer" aria-label="KAI on GitHub"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8a8.01 8.01 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.65 7.65 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"></path></svg></a>
+							</div>
+						</header>
+						<div class="software-entry__body">
+							<div class="software-entry__logo">
+								<img src="images/kai_logo.png" alt="KAI logo" loading="lazy" decoding="async" />
+							</div>
+							<div class="software-entry__content">
+								<p>The Keck AO Imaging (KAI) data reduction pipeline processes raw Keck images and produces catalogs of photometry and astrometry for each epoch. Note, the pipeline is no longer dependent on IRAF!</p>
+							</div>
+						</div>
+					</section>
+
+					<section class="software-entry">
+						<header class="major software-entry__header">
+							<div class="software-entry__title-row">
+								<h2>FlyStar</h2>
+								<a class="software-link__github" href="https://github.com/MovingUniverseLab/flystar" target="_blank" rel="noopener noreferrer" aria-label="FlyStar on GitHub"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8a8.01 8.01 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.65 7.65 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"></path></svg></a>
+							</div>
+						</header>
+						<div class="software-entry__body software-entry__body--no-logo">
+							<div class="software-entry__logo"></div>
+							<div class="software-entry__content">
+								<p>FlyStar cross-matches reference stars and transforms detector coordinates into a common astrometric frame, tying Keck AO epochs to survey or Gaia reference catalogs.</p>
+							</div>
+						</div>
+					</section>
+				</section>
+			</div>
+
+			<footer id="footer">
+				<section>
+					<h2>Contact</h2>
+					<dl class="alt">
+						<dt>Address</dt>
+						<dd>Astronomy Department <br>
+501 Campbell Hall
+<br>
+University of California, Berkeley
+<br>
+Berkeley, CA 94720
+						</dd>
+						<dt>Email</dt>
+						<dd><a href="mailto:nsabrams@berkeley.edu">nsabrams@berkeley.edu</a></dd>
+						<dt>ORCID</dt>
+						<dd><a href="https://orcid.org/0000-0002-0287-3783" target="_blank"> 0000-0002-0287-3783 </a></dd>
+					</dl>
+				</section>
+				<p class="copyright">&copy; Natasha S. Abrams 2026. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+			</footer>
+
+		</div>
+
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
